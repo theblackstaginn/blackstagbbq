@@ -3,7 +3,7 @@
    ============================== */
 
 :root {
-  --glass: rgba(5, 6, 10, 0.68);
+  --glass: rgba(5, 6, 10, 0.0);
   --glass-strong: rgba(5, 6, 10, 0.82);
   --border: rgba(255, 223, 191, 0.2);
   --accent: #e1a86b;
@@ -75,10 +75,6 @@ p {
   box-shadow: none !important;
   backdrop-filter: none !important;
 }
-
-/* ==============================
-   Hero
-   ============================== */
 
 /* ==============================
    Hero (pure transparent)
@@ -280,10 +276,6 @@ p {
 
   .hero {
     padding: 2.5rem 1.25rem 3.25rem;
-  }
-
-  .hero-inner {
-    padding: 2rem 1.5rem 2.25rem;
   }
 
   .section {
