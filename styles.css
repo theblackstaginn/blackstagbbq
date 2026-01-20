@@ -58,10 +58,15 @@ body {
   margin-bottom: 1rem;
 }
 
+h1,
+h2 {
+  font-family: "Cinzel", serif;
+}
+
 h1 {
   margin: 0;
   font-size: clamp(2.25rem, 4vw, 3rem);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -88,6 +93,21 @@ h1 {
   display: block;
 }
 
+/* Hero social */
+
+.hero-social {
+  margin-top: 1.75rem;
+}
+
+.hero-social-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: #d0c0b0;
+  margin-bottom: 0.45rem;
+}
+
 /* ---- Sections ---- */
 
 .section {
@@ -102,6 +122,7 @@ h1 {
 .section-inner {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .section h2 {
@@ -121,12 +142,15 @@ h1 {
   gap: 1.75rem;
 }
 
+/* Clear glass cards */
+
 .card {
-  background: rgba(10, 10, 12, 0.9);
+  background: rgba(10, 10, 12, 0.32);
   border-radius: 14px;
   padding: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
 }
 
 .card img {
@@ -151,7 +175,7 @@ h1 {
 }
 
 .sauces-card {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.32);
 }
 
 /* ---- CTA ---- */
@@ -179,23 +203,26 @@ h1 {
   transform: translateY(-1px);
 }
 
-/* ---- Contact form ---- */
+/* ---- Contact form (glass) ---- */
 
 .contact-form {
   margin-top: 1.5rem;
   padding: 1.5rem 1.25rem 1.75rem;
-  background: rgba(8, 8, 10, 0.95);
+  background: rgba(8, 8, 10, 0.32);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 .form-row {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 label {
@@ -205,6 +232,8 @@ label {
   flex-direction: column;
   gap: 0.35rem;
   flex: 1 1 180px;
+  max-width: 260px;
+  margin: 0 auto;
 }
 
 input,
@@ -212,7 +241,7 @@ textarea {
   padding: 0.6rem 0.7rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: #050608;
+  background: rgba(5, 6, 8, 0.85);
   color: #f7f3ee;
   font: inherit;
 }
@@ -225,15 +254,17 @@ textarea:focus {
 
 .full-width {
   flex: 1 1 100%;
+  max-width: 100%;
 }
 
 /* ---- Social ---- */
 
 .social-row {
-  margin-top: 2rem;
+  margin-top: 0.25rem;
   display: flex;
   gap: 1.25rem;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
