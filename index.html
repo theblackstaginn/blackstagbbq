@@ -4,218 +4,51 @@
   <meta charset="utf-8" />
   <title>Black Stag Fusion BBQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Black Stag Fusion BBQ – Latin–Asian fusion barbecue food truck based in North Georgia. Tacos, bowls, sliders, wedges, and Korean-inspired scratch sauces."
-  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <div class="brand-title">BLACK STAG</div>
-        <div class="brand-subtitle">Fusion BBQ</div>
-      </div>
-      <nav class="site-nav">
-        <a href="#food">Food</a>
-        <a href="#menu">Menu</a>
-        <a href="#catering">Book Us</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO / TRUCK -->
-    <section id="hero" class="panel hero">
-      <div class="hero-text">
-        <h1>Latin–Asian Fusion BBQ</h1>
-        <p>
-          Black Stag Fusion BBQ is built for brewery patios, taprooms, and
-          private events across North Georgia. Tacos, bowls, sliders, potato
-          wedges, and Korean-inspired scratch sauces.
-        </p>
-        <div class="hero-cta">
-          <a href="#catering" class="btn-primary">Request Catering/Event</a>
-        </div>
-      </div>
-      <figure class="hero-image">
-        <!-- Replace with your service-side truck image -->
-        <img
-          src="./images/truck-hero.jpg"
-          alt="Black Stag Fusion BBQ food truck service side."
-        />
-      </figure>
-    </section>
+  <div id="hero">
+    <div id="hero-inner">
+      <img id="hero-logo" src="./assets-bbq/stag-logo.png" alt="Black Stag logo" />
 
-    <!-- FOOD SECTION -->
-    <section id="food" class="panel">
-      <h2>Food</h2>
-      <p class="section-lead">
-        Latin–Asian fusion barbecue built around smoked meats, scratch sauces,
-        and brewery-friendly plates.
-      </p>
-      <ul class="food-list">
-        <li>Tacos – loaded with your choice of protein and scratch sauces.</li>
-        <li>Bowls – rice or wedge base with stacked toppings and sauces.</li>
-        <li>Sliders – soft rolls piled with Korean-style proteins.</li>
-        <li>Potato wedges – crispy, seasoned, and built to carry sauce.</li>
-      </ul>
-      <figure class="hero-food">
-        <!-- Replace with your food spread image -->
-        <img
-          src="./images/food-hero.jpg"
-          alt="Spread of Black Stag Fusion BBQ tacos, bowls, sliders, and wedges."
-        />
-      </figure>
-    </section>
+      <h1 id="hero-title">Black Stag<br><span>Fusion BBQ</span></h1>
 
-    <!-- MENU SECTION -->
-    <section id="menu" class="panel">
-      <h2>Service Window Menu</h2>
-      <p class="section-lead">
-        Core window layout: tacos, bowls, sliders, wedges, and rotating
-        specials. Proteins and sauces stay at the center.
-      </p>
+      <p id="hero-tag">Smoke-kissed southern BBQ colliding with bold fusion fire.</p>
 
-      <div class="menu-columns">
-        <div>
-          <h3>Proteins</h3>
-          <ul>
-            <li>Chicken</li>
-            <li>Korean BBQ brisket</li>
-            <li>Marinated mushrooms</li>
-            <li>Tofu</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Sauces</h3>
-          <ul>
-            <li>Gochujang crema</li>
-            <li>Hoisin BBQ</li>
-            <li>Jalapeño crema</li>
-            <li>Avocado chili ranch</li>
-          </ul>
-        </div>
-      </div>
-
-      <figure class="menu-image">
-        <!-- Replace with your hanging menu sign image -->
-        <img
-          src="./images/menu-board.jpg"
-          alt="Black Stag Fusion BBQ hanging service window menu sign."
-        />
-      </figure>
-    </section>
-
-    <!-- CATERING / EMAIL PORTAL -->
-    <section id="catering" class="panel">
-      <h2>Catering &amp; Events</h2>
-      <p class="section-lead">
-        Want Black Stag Fusion BBQ at your brewery, wedding, or private event?
-        Tell us what you’re planning and we’ll get back to you.
-      </p>
-
-      <form
-        class="contact-form"
-        action="https://formsubmit.co/theblackstaginn@gmail.com"
-        method="POST"
-      >
-        <!-- FormSubmit settings -->
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Black Stag Fusion BBQ Inquiry"
-        />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-
-        <div class="field-row">
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label>
-            Event type
-            <input
-              type="text"
-              name="event_type"
-              placeholder="Brewery pop-up, wedding, party…"
-            />
-          </label>
-
-          <label>
-            Event date
-            <input
-              type="text"
-              name="event_date"
-              placeholder="Approximate date(s)"
-            />
-          </label>
-        </div>
-
-        <label class="full-width">
-          Location
-          <input
-            type="text"
-            name="location"
-            placeholder="City / venue"
-          />
-        </label>
-
-        <label class="full-width">
-          Estimated headcount
-          <input
-            type="number"
-            name="headcount"
-            min="1"
-            placeholder="Rough guest count"
-          />
-        </label>
-
-        <label class="full-width">
-          Details
-          <textarea
-            name="message"
-            rows="4"
-            required
-            placeholder="Tell us about your event and what you have in mind."
-          ></textarea>
-        </label>
-
-        <button type="submit" class="btn-primary">
-          Send Inquiry
-        </button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <div class="brand-small">Black Stag Fusion BBQ</div>
-        <div class="footer-text">North Georgia • Latin–Asian Fusion BBQ</div>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:theblackstaginn@gmail.com">
-          theblackstaginn@gmail.com
+      <div id="hero-social">
+        <a href="https://facebook.com/BlackStagFusionBBQ" target="_blank" rel="noopener">
+          <img class="social-btn" src="./assets-bbq/FB-button.png" alt="Facebook" />
         </a>
-        <a href="https://instagram.com/blackstagfusionbbq" target="_blank">
-          Instagram
+        <a href="https://instagram.com/blackstagfusionbbq" target="_blank" rel="noopener">
+          <img class="social-btn" src="./assets-bbq/IG-button.png" alt="Instagram" />
         </a>
-        <a href="https://facebook.com" target="_blank">
-          Facebook
-        </a>
+      </div>
+
+      <div id="hero-cta">
+        <a href="#menu" class="btn">Menu</a>
+        <a href="#contact" class="btn ghost">Book Us</a>
       </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- MENU SECTION -->
+  <section id="menu">
+    <h2 class="section-title">Menu</h2>
+    <img class="section-img" src="./assets-bbq/bbq-menu.png" alt="Menu" />
+    <img class="section-img" src="./assets-bbq/food-spread.png" alt="Food Spread" />
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2 class="section-title">Book the Truck</h2>
+    <p class="contact-line">
+      Email: <a href="mailto:theblackstaginn@gmail.com">theblackstaginn@gmail.com</a>
+    </p>
+    <p class="contact-line">
+      Instagram: <a href="https://instagram.com/blackstagfusionbbq">@blackstagfusionbbq</a>
+    </p>
+  </section>
+
 </body>
 </html>
