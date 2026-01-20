@@ -230,7 +230,8 @@ img {
 @media (max-width: 800px) {
   body {
     background-image: url("assets-bbq/bbq-bg-mobile.png");
-    background-attachment: scroll;
+    background-attachment: fixed;   /* keep smoke locked on mobile */
+    background-size: cover;
     background-position: center top;
   }
 
