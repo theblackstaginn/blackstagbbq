@@ -1,0 +1,133 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f5f5f5;
+  background: #050506 url("./assets-bbq/bbq-bg-web.png") center center / cover no-repeat fixed;
+  line-height: 1.5;
+}
+
+/* Use mobile background on small screens */
+@media (max-width: 768px) {
+  body {
+    background: #050506 url("./assets-bbq/bbq-bg-mobile.png") center center / cover no-repeat fixed;
+  }
+}
+
+/* Dark overlay over the background */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Page shell */
+.shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7);
+  display: block;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.4rem;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  color: rgba(245, 245, 245, 0.85);
+}
+
+/* Content cards */
+.block {
+  background: rgba(5, 5, 10, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.5rem 1.25rem;
+  backdrop-filter: blur(10px);
+}
+
+.block h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.block p + p {
+  margin-top: 0.35rem;
+}
+
+/* Contact links */
+.contact-line a {
+  color: #f5f5f5;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(245, 245, 245, 0.6);
+}
+
+.contact-line a:hover {
+  border-bottom-style: solid;
+}
+
+/* Socials */
+.socials {
+  text-align: left;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(230, 230, 230, 0.7);
+  padding-top: 0.5rem;
+}
+
+/* Slightly roomier on larger screens */
+@media (min-width: 768px) {
+  .shell {
+    padding: 3rem 2rem 3.5rem;
+    gap: 2.5rem;
+  }
+}
