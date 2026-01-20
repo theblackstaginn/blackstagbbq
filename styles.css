@@ -1,4 +1,18 @@
-/* ---- Base ---- */
+/* ==============================
+   Base + background
+   ============================== */
+
+:root {
+  --glass: rgba(5, 6, 10, 0.68);
+  --glass-strong: rgba(5, 6, 10, 0.82);
+  --border: rgba(255, 223, 191, 0.2);
+  --accent: #e1a86b;
+  --accent-soft: rgba(225, 168, 107, 0.18);
+  --text-main: #f7f3ee;
+  --text-muted: #c2b3a4;
+  --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.8);
+  --radius-lg: 26px;
+}
 
 *,
 *::before,
@@ -12,260 +26,174 @@ body {
   padding: 0;
 }
 
+/* Global smoke background */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: "Cardo", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", serif;
   background-color: #050608;
-  color: #f7f3ee;
-  line-height: 1.5;
-}
-
-/* ---- Hero ---- */
-
-.hero {
-  min-height: 100vh;
   background-image: url("assets-bbq/bbq-bg-web.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative;
-}
-
-.hero-overlay {
-  min-height: inherit;
-  background: radial-gradient(
-      circle at top,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.9)
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), #050608);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-inner {
-  max-width: 960px;
-  width: 100%;
-  padding: 3rem 1.75rem 4rem;
+  color: var(--text-main);
+  line-height: 1.6;
   text-align: center;
 }
 
-.hero-logo {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
+/* ==============================
+   Typography
+   ============================== */
 
 h1,
 h2 {
-  font-family: "Cinzel", serif;
+  font-family: "Cinzel", "Times New Roman", serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
 }
 
 h1 {
-  margin: 0;
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: clamp(2.4rem, 5vw, 3.1rem);
 }
 
-.tagline {
-  margin: 0.75rem auto 2.25rem;
-  max-width: 640px;
-  font-size: 0.98rem;
-  color: #f0e3d4;
+h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
-.hero-trucks {
+p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==============================
+   Shared layout helpers
+   ============================== */
+
+.glass {
+  background: radial-gradient(circle at top left, var(--accent-soft), transparent)
+      border-box,
+    var(--glass);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(20px);
+}
+
+/* ==============================
+   Hero
+   ============================== */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  padding: 3rem 1.75rem 4rem;
 }
 
-.truck {
-  max-width: 320px;
-  width: 45%;
-  min-width: 240px;
-  height: auto;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(1, 1, 3, 0.9),
+    rgba(10, 5, 2, 0.9)
+  );
+  mix-blend-mode: multiply;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 960px;
+  padding: 2.5rem 2rem 2.75rem;
+  z-index: 1;
+}
+
+.hero-logo img {
+  width: 120px;
+  max-width: 38vw;
   display: block;
+  margin: 0 auto 1.75rem;
 }
 
-/* Hero social */
-
-.hero-social {
-  margin-top: 1.75rem;
-}
-
-.hero-social-label {
-  display: block;
+.hero-text .tagline {
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.72rem;
-  color: #d0c0b0;
-  margin-bottom: 0.45rem;
+  color: #f4e3ce;
 }
 
-/* ---- Sections ---- */
+.launch-note {
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   Sections
+   ============================== */
 
 .section {
   padding: 3.5rem 1.75rem;
-  background: #050608;
-}
-
-.section.dark {
-  background: #090b0f;
+  background: transparent;
 }
 
 .section-inner {
   max-width: 960px;
   margin: 0 auto;
-  text-align: center;
+  padding: 2.25rem 2rem 2.5rem;
 }
 
-.section h2 {
-  margin: 0 0 1rem;
-  font-size: 1.6rem;
+/* Center everything */
+.section-inner p {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section-text {
-  margin: 0 0 2rem;
-  color: #e0d3c5;
-  font-size: 0.98rem;
-}
-
-.grid-two {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.75rem;
-}
-
-/* Clear glass cards */
-
-.card {
-  background: rgba(10, 10, 12, 0.32);
-  border-radius: 14px;
-  padding: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-}
-
-.card img {
-  display: block;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card figcaption {
-  margin-top: 0.55rem;
-  font-size: 0.82rem;
-  color: #cbbeb2;
-}
-
-/* sauces layout */
-
-.sauce-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.sauces-card {
-  background: rgba(0, 0, 0, 0.32);
-}
-
-/* ---- CTA ---- */
-
-.cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.9rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: radial-gradient(circle at top, #f5963c, #8b3513);
-  color: #120806;
-  font-weight: 600;
-  font-size: 0.98rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
-
-.cta:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
-}
-
-/* ---- Contact form (glass) ---- */
-
-.contact-form {
+/* Images */
+.image-wrap {
   margin-top: 1.5rem;
-  padding: 1.5rem 1.25rem 1.75rem;
-  background: rgba(8, 8, 10, 0.32);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  backdrop-filter: blur(10px);
-  text-align: center;
 }
 
-.form-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+.image-wrap img {
+  max-width: min(100%, 720px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-label {
-  font-size: 0.84rem;
-  color: #d7c8b8;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  flex: 1 1 180px;
-  max-width: 260px;
+/* Truck + socials */
+
+.truck-wrap {
+  margin: 1.75rem 0 1rem;
+}
+
+.truck-image {
+  max-width: min(100%, 640px);
+  height: auto;
+  display: block;
   margin: 0 auto;
 }
 
-input,
-textarea {
-  padding: 0.6rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(5, 6, 8, 0.85);
-  color: #f7f3ee;
-  font: inherit;
+.check-us-out {
+  margin-top: 1.25rem;
 }
 
-input:focus,
-textarea:focus {
-  outline: 1px solid #f5963c;
-  border-color: #f5963c;
+.check-label {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f4e3ce;
+  margin-bottom: 0.75rem;
 }
-
-.full-width {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-/* ---- Social ---- */
 
 .social-row {
-  margin-top: 0.25rem;
   display: flex;
-  gap: 1.25rem;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .social-link img {
@@ -274,42 +202,107 @@ textarea:focus {
   display: block;
 }
 
-/* ---- Footer ---- */
+/* ==============================
+   Contact form
+   ============================== */
+
+.contact-form {
+  max-width: 420px;
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  color: #f4e3ce;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font: inherit;
+  color: var(--text-main);
+  background: var(--glass-strong);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(225, 168, 107, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: radial-gradient(circle at top left, #f1c28a, #c16b2c);
+  color: #1a0b04;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  filter: brightness(1.03);
+}
+
+/* ==============================
+   Footer
+   ============================== */
 
 .footer {
-  padding: 1.5rem 1.75rem 2rem;
+  padding: 1.5rem 1.75rem 2.25rem;
   text-align: center;
   font-size: 0.8rem;
   color: #a99b8d;
-  background: #050608;
+  background: transparent;
 }
 
-/* ---- Responsive ---- */
+/* ==============================
+   Responsive
+   ============================== */
 
 @media (max-width: 800px) {
-  .hero {
+  body {
     background-image: url("assets-bbq/bbq-bg-mobile.png");
     background-attachment: scroll;
+    background-position: center top;
   }
 
-  .grid-two {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .sauce-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-trucks {
-    gap: 1rem;
-  }
-
-  .truck {
-    width: 100%;
-    max-width: 360px;
+  .hero {
+    padding: 2.5rem 1.25rem 3.25rem;
   }
 
   .hero-inner {
-    padding-top: 2.5rem;
+    padding: 2rem 1.5rem 2.25rem;
+  }
+
+  .section {
+    padding: 2.75rem 1.25rem;
+  }
+
+  .section-inner {
+    padding: 2rem 1.5rem 2.25rem;
+  }
+
+  .contact-form {
+    text-align: left;
   }
 }
