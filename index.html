@@ -8,47 +8,175 @@
 </head>
 <body>
 
-  <div id="hero">
-    <div id="hero-inner">
-      <img id="hero-logo" src="./assets-bbq/stag-logo.png" alt="Black Stag logo" />
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-inner">
+        <img
+          src="assets-bbq/stag-logo.png"
+          alt="Black Stag Fusion BBQ logo"
+          class="hero-logo"
+        />
 
-      <h1 id="hero-title">Black Stag<br><span>Fusion BBQ</span></h1>
+        <h1>Black Stag Fusion BBQ</h1>
+        <p class="tagline">
+          Latin–Asian fusion BBQ • North GA tacos, bowls, sliders &amp; wedges •
+          Korean scratch sauces
+        </p>
 
-      <p id="hero-tag">Smoke-kissed southern BBQ colliding with bold fusion fire.</p>
+        <div class="hero-trucks">
+          <img
+            src="assets-bbq/truck-left.png"
+            alt="Black Stag Fusion BBQ truck, left side"
+            class="truck truck-left"
+          />
+          <img
+            src="assets-bbq/truck-right.png"
+            alt="Black Stag Fusion BBQ truck, service side"
+            class="truck truck-right"
+          />
+        </div>
 
-      <div id="hero-social">
-        <a href="https://facebook.com/BlackStagFusionBBQ" target="_blank" rel="noopener">
-          <img class="social-btn" src="./assets-bbq/FB-button.png" alt="Facebook" />
-        </a>
-        <a href="https://instagram.com/blackstagfusionbbq" target="_blank" rel="noopener">
-          <img class="social-btn" src="./assets-bbq/IG-button.png" alt="Instagram" />
-        </a>
-      </div>
-
-      <div id="hero-cta">
-        <a href="#menu" class="btn">Menu</a>
-        <a href="#contact" class="btn ghost">Book Us</a>
+        <a href="#contact" class="cta">Book the Truck</a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- MENU SECTION -->
-  <section id="menu">
-    <h2 class="section-title">Menu</h2>
-    <img class="section-img" src="./assets-bbq/bbq-menu.png" alt="Menu" />
-    <img class="section-img" src="./assets-bbq/food-spread.png" alt="Food Spread" />
-  </section>
+  <!-- FOOD SPREAD + MENU -->
+  <main>
+    <section class="section">
+      <div class="section-inner">
+        <h2>Fire, Smoke &amp; Fusion</h2>
+        <p class="section-text">
+          From Korean gochujang sliders to street–style tacos and loaded wedges,
+          every plate rides the line between comfort food and late–night chef
+          brain. All sauces are made from scratch in our North Georgia kitchen.
+        </p>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2 class="section-title">Book the Truck</h2>
-    <p class="contact-line">
-      Email: <a href="mailto:theblackstaginn@gmail.com">theblackstaginn@gmail.com</a>
-    </p>
-    <p class="contact-line">
-      Instagram: <a href="https://instagram.com/blackstagfusionbbq">@blackstagfusionbbq</a>
-    </p>
-  </section>
+        <div class="grid-two">
+          <figure class="card">
+            <img
+              src="assets-bbq/food-spread.png"
+              alt="Black Stag Fusion BBQ food spread"
+            />
+            <figcaption>Service–side spread from the truck window.</figcaption>
+          </figure>
 
+          <figure class="card">
+            <img
+              src="assets-bbq/bbq-menu.png"
+              alt="Black Stag Fusion BBQ sample menu"
+            />
+            <figcaption>Sample menu. Offerings rotate with the season.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAUCES FEATURE -->
+    <section class="section dark">
+      <div class="section-inner">
+        <div class="sauce-layout">
+          <div>
+            <h2>Scratch Sauces • Built for Smoke</h2>
+            <p class="section-text">
+              No bottled shortcuts. We build everything from the ground up:
+              gochujang glazes, citrus–garlic mojo, jalapeño crema, house
+              kimchi and rotating specials tuned to whatever we’re smoking.
+            </p>
+          </div>
+          <figure class="card sauces-card">
+            <img
+              src="assets-bbq/sauces.png"
+              alt="House sauces from Black Stag Fusion BBQ"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + SOCIAL -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <h2>Book Black Stag Fusion BBQ</h2>
+        <p class="section-text">
+          Breweries, taprooms, private events and festivals in North Georgia.
+          Tell us about your date, headcount and setup needs and we’ll get back
+          to you with availability and a sample menu.
+        </p>
+
+        <form
+          class="contact-form"
+          action="mailto:theblackstaginn@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-row">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Event date
+              <input type="text" name="date" placeholder="Approximate is fine" />
+            </label>
+            <label>
+              Venue / location
+              <input type="text" name="location" />
+            </label>
+          </div>
+
+          <label class="full-width">
+            Tell us what you’re planning
+            <textarea name="message" rows="4"></textarea>
+          </label>
+
+          <button type="submit" class="cta">Email the Pit</button>
+        </form>
+
+        <div class="social-row">
+          <a
+            href="https://www.facebook.com/profile.php?id=61586939787581"
+            class="social-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets-bbq/FB-button.png"
+              alt="Facebook icon – Black Stag Fusion BBQ"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/blackstagbbq"
+            class="social-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets-bbq/IG-button.png"
+              alt="Instagram icon – @blackstagbbq"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Black Stag Fusion BBQ • North Georgia</p>
+  </footer>
+
+  <script>
+    // simple year stamp
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
