@@ -70,13 +70,10 @@ p {
    ============================== */
 
 .glass {
-  background: radial-gradient(circle at top left, var(--accent-soft), transparent)
-      border-box,
-    var(--glass);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(20px);
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 /* ==============================
