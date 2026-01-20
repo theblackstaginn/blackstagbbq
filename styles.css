@@ -1,334 +1,122 @@
-/* Base */
-
 :root {
-  --bg: #050608;
-  --bg-panel: rgba(11, 13, 16, 0.9);
-  --text: #f5f5f5;
-  --muted: #b9b9b9;
-  --accent: #f5c16a; /* adjust to taste (copper/gold) */
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --radius: 18px;
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
+  --bg: #0b0b0b;
+  --text: #e6e6e6;
+  --accent: #c25b27;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background: radial-gradient(circle at top, #161921 0%, #050608 55%, #020205 100%);
+  background: var(--bg);
   color: var(--text);
+  text-align: center;
 }
 
-/* Header */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(18px);
-  background: linear-gradient(
-    to bottom,
-    rgba(5, 6, 8, 0.92),
-    rgba(5, 6, 8, 0.75),
-    transparent
-  );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+/* HERO */
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets-bbq/bbq-bg-web.png") center/cover no-repeat fixed;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.brand-title {
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-  color: var(--muted);
-}
-
-.brand-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.site-nav a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  padding: 0.3rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-}
-
-.site-nav a:hover {
-  color: var(--text);
-  border-color: rgba(245, 193, 106, 0.5);
-}
-
-/* Panels / sections */
-
-main {
-  padding: 3rem 1.5rem 4rem;
-}
-
-.panel {
-  max-width: 1100px;
-  margin: 0 auto 3rem;
-  padding: 2rem;
-  border-radius: var(--radius);
-  background: var(--bg-panel);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-soft);
-}
-
-.panel:last-of-type {
-  margin-bottom: 0;
-}
-
-.panel h2 {
-  margin: 0 0 0.5rem;
-}
-
-.section-lead {
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-  color: var(--muted);
-  max-width: 42rem;
-}
-
-/* Hero */
-
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.hero-text h1 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: clamp(2.1rem, 3vw, 2.6rem);
-}
-
-.hero-text p {
-  margin: 0 0 1.25rem;
-  color: var(--muted);
-  max-width: 32rem;
-}
-
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-soft);
-  display: block;
-}
-
-/* Buttons */
-
-.btn-primary {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.6rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
+  padding: 20px;
+}
+
+@media(max-width: 768px) {
+  #hero {
+    background: url("./assets-bbq/bbq-bg-mobile.png") center/cover no-repeat;
+    background-attachment: scroll;
+  }
+}
+
+#hero-inner {
+  max-width: 600px;
+  width: 100%;
+}
+
+#hero-logo {
+  width: 120px;
+  margin-bottom: 14px;
+}
+
+#hero-title {
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+#hero-title span {
+  color: var(--accent);
+}
+
+#hero-tag {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 22px;
+}
+
+/* social */
+#hero-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+}
+
+/* CTA buttons */
+#hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--text);
   background: var(--accent);
-  color: #181818;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+.section-img {
+  width: 94%;
+  max-width: 820px;
+  margin-bottom: 26px;
+  border-radius: 6px;
+}
+
+/* CONTACT */
+.contact-line {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.contact-line a {
+  color: var(--accent);
   text-decoration: none;
-}
-
-.btn-primary:hover {
-  filter: brightness(1.08);
-}
-
-/* Food / Menu */
-
-.food-list {
-  margin: 0 0 1.5rem;
-  padding-left: 1.2rem;
-  color: var(--muted);
-}
-
-.hero-food img,
-.menu-image img {
-  width: 100%;
-  max-width: 900px;
-  display: block;
-  margin: 0 auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-soft);
-}
-
-.menu-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-  margin-bottom: 1.75rem;
-}
-
-.menu-columns h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.menu-columns ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
-}
-
-/* Contact form */
-
-.contact-form {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.field-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.field-row label {
-  flex: 1 1 200px;
-}
-
-.contact-form label {
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(5, 5, 5, 0.9);
-  color: var(--text);
-  font-family: inherit;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(185, 185, 185, 0.7);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* Footer */
-
-.site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: #050608;
-  padding: 1.5rem 1.5rem 2rem;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand-small {
-  font-weight: 600;
-}
-
-.footer-text {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.footer-links a {
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: var(--text);
-}
-
-/* Responsive */
-
-@media (max-width: 800px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    padding-inline: 1rem;
-  }
-
-  .panel {
-    padding: 1.5rem;
-  }
 }
