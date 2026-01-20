@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Black Stag Fusion BBQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <main class="shell">
+    <header class="hero">
+      <img src="./assets-bbq/food-spread.png"
+           alt="Black Stag Fusion BBQ food spread"
+           class="hero-image" />
+      <div class="hero-text">
+        <h1>BLACK STAG FUSION BBQ</h1>
+        <p>Smoky, gothic fusion barbecue rolling through North Georgia.</p>
+      </div>
+    </header>
+
+    <section class="block">
+      <h2>Find the Truck</h2>
+      <p>Launching soon around White County, GA. Taproom nights, festivals, and private events.</p>
+    </section>
+
+    <section class="block">
+      <h2>Contact</h2>
+      <p>Bookings, events, and collaborations:</p>
+      <p class="contact-line"><strong>Phone:</strong> <a href="tel:17067250972">706-725-0972</a></p>
+      <p class="contact-line"><strong>Email:</strong> <a href="mailto:info@blackstagfusionbbq.com">info@blackstagfusionbbq.com</a></p>
+    </section>
+
+    <section class="block socials">
+      <h2>Social</h2>
+      <p>@blackstagfusionbbq on Instagram &amp; Facebook</p>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Black Stag Fusion BBQ. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
