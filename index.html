@@ -13,19 +13,19 @@
 
   <!-- HERO -->
   <section class="hero">
-  <div class="hero-content">
-    <div class="hero-logo">
-      <img src="assets-bbq/stag-logo.png" alt="Black Stag Fusion BBQ logo" />
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="assets-bbq/stag-logo.png" alt="Black Stag Fusion BBQ logo" />
+      </div>
+      <h1>Black&nbsp;Stag Fusion BBQ</h1>
+      <p class="tagline">
+        Latin–Asian fusion BBQ • North GA tacos, bowls, sliders, wedges
+      </p>
+      <p class="launch-note">
+        Slow-smoked meats • Korean scratch sauces • Launching 2026
+      </p>
     </div>
-    <h1>Black&nbsp;Stag Fusion BBQ</h1>
-    <p class="tagline">
-      Latin–Asian fusion BBQ • North GA tacos, bowls, sliders, wedges
-    </p>
-    <p class="launch-note">
-      Slow-smoked meats • Korean scratch sauces • Launching 2026
-    </p>
-  </div>
-</section>
+  </section>
 
   <main>
 
@@ -98,7 +98,7 @@
                target="_blank" rel="noopener noreferrer">
               <img src="assets-bbq/FB-button.png" alt="Facebook" />
             </a>
-            <a href="https://www.instagram.com/blackstagfusionbbq/"
+            <a href="https://www.instagram.com/blackstagbbq/"
                class="social-link"
                target="_blank" rel="noopener noreferrer">
               <img src="assets-bbq/IG-button.png" alt="Instagram" />
@@ -117,10 +117,15 @@
           you have in mind and we’ll get back to you.
         </p>
 
+        <!-- Secure HTTPS form endpoint via FormSubmit -->
         <form class="contact-form"
-              action="mailto:theblackstaginn@gmail.com"
-              method="post"
-              enctype="text/plain">
+              action="https://formsubmit.co/theblackstaginn@gmail.com"
+              method="POST">
+          <!-- Optional: better subject line in emails -->
+          <input type="hidden" name="_subject" value="Black Stag Fusion BBQ inquiry" />
+          <!-- Optional: redirect back to site after submit -->
+          <input type="hidden" name="_next" value="https://theblackstaginn.github.io/blackstagbbq/" />
+
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="Name" type="text" required />
@@ -151,7 +156,6 @@
   </footer>
 
   <script>
-    // simple year update
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
