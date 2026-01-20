@@ -26,7 +26,6 @@ body {
   padding: 0;
 }
 
-/* Global smoke background */
 body {
   font-family: "Cardo", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", serif;
@@ -60,13 +59,16 @@ h2 {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
+/* body text upgrade */
 p {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   color: var(--text-muted);
+  font-size: 1.15rem;  /* bigger */
+  font-weight: 600;    /* bolder */
 }
 
 /* ==============================
-   Shared layout helpers
+   Layout
    ============================== */
 
 .glass {
@@ -75,10 +77,6 @@ p {
   box-shadow: none !important;
   backdrop-filter: none !important;
 }
-
-/* ==============================
-   Hero (pure transparent)
-   ============================== */
 
 .hero {
   min-height: 100vh;
@@ -90,10 +88,6 @@ p {
 }
 
 .hero-content {
-  text-align: center;
-  background: none;
-  border: none;
-  box-shadow: none;
   padding: 0;
 }
 
@@ -105,20 +99,17 @@ p {
 }
 
 .tagline {
-  font-size: 0.95rem;
-  text-transform: uppercase;
+  font-size: 1.15rem;
   letter-spacing: 0.18em;
   color: #f4e3ce;
+  font-weight: 600;
 }
 
 .launch-note {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: #c2b3a4;
+  font-weight: 600;
 }
-
-/* ==============================
-   Sections
-   ============================== */
 
 .section {
   padding: 2.25rem 1.75rem;
@@ -131,7 +122,6 @@ p {
   padding: 1.75rem 1.5rem 2rem;
 }
 
-/* Center everything */
 .section-inner p {
   max-width: 40rem;
   margin-left: auto;
@@ -142,7 +132,6 @@ p {
    Images
    ============================== */
 
-/* global rounding */
 img {
   border-radius: 18px;
 }
@@ -154,13 +143,13 @@ img {
 .image-wrap img {
   max-width: min(100%, 720px);
   height: auto;
-  display: block;
-  margin: 0 auto;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Truck + socials */
+/* ==============================
+   Socials + Truck
+   ============================== */
 
 .truck-wrap {
   margin: 1.75rem 0 1rem;
@@ -168,7 +157,6 @@ img {
 
 .truck-image {
   max-width: min(100%, 640px);
-  height: auto;
   display: block;
   margin: 0 auto;
 }
@@ -183,11 +171,11 @@ img {
   text-transform: uppercase;
   color: #f4e3ce;
   margin-bottom: 0.75rem;
+  font-size: 1.05rem;
 }
 
 .social-row {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 1.25rem;
 }
@@ -195,68 +183,31 @@ img {
 .social-link img {
   width: 44px;
   height: 44px;
-  display: block;
 }
 
 /* ==============================
-   Contact form
+   Mailto Button
    ============================== */
-
-.contact-form {
-  max-width: 420px;
-  margin: 1.5rem auto 0;
-  text-align: left;
-}
-
-.field {
-  margin-bottom: 1rem;
-}
-
-.field label {
-  display: block;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
-  color: #f4e3ce;
-}
-
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 0.7rem 0.85rem;
-  font: inherit;
-  color: var(--text-main);
-  background: var(--glass-strong);
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  outline: none;
-}
-
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(225, 168, 107, 0.7);
-}
 
 .btn {
   display: inline-block;
-  margin-top: 0.25rem;
-  padding: 0.8rem 1.8rem;
+  margin-top: 1rem;
+  padding: 0.95rem 2.2rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   background: radial-gradient(circle at top left, #f1c28a, #c16b2c);
   color: #1a0b04;
   font-family: "Cinzel", "Times New Roman", serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
-  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
-  filter: brightness(1.03);
+  filter: brightness(1.05);
 }
 
 /* ==============================
@@ -266,9 +217,10 @@ img {
 .footer {
   padding: 1.5rem 1.75rem 2.25rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #a99b8d;
   background: transparent;
+  font-weight: 600;
 }
 
 /* ==============================
@@ -292,9 +244,5 @@ img {
 
   .section-inner {
     padding: 1.5rem 1.25rem 2rem;
-  }
-
-  .contact-form {
-    text-align: left;
   }
 }
