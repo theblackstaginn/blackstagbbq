@@ -93,7 +93,7 @@
         <div class="check-us-out">
           <p class="check-label">Check us out on</p>
           <div class="social-row">
-            <a href="https://www.facebook.com/profile.php?id=61586939787581"
+            <a href="https://www.facebook.com/BlackStagFusionBBQ/"
                class="social-link"
                target="_blank" rel="noopener noreferrer">
               <img src="assets-bbq/FB-button.png" alt="Facebook" />
@@ -117,15 +117,10 @@
           you have in mind and we’ll get back to you.
         </p>
 
-        <!-- Secure HTTPS form endpoint via FormSubmit -->
         <form class="contact-form"
-              action="https://formsubmit.co/theblackstaginn@gmail.com"
-              method="POST">
-          <!-- Optional: better subject line in emails -->
-          <input type="hidden" name="_subject" value="Black Stag Fusion BBQ inquiry" />
-          <!-- Optional: redirect back to site after submit -->
-          <input type="hidden" name="_next" value="https://theblackstaginn.github.io/blackstagbbq/" />
-
+              action="mailto:theblackstaginn@gmail.com"
+              method="post"
+              enctype="text/plain">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="Name" type="text" required />
@@ -156,6 +151,7 @@
   </footer>
 
   <script>
+    // simple year update
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
