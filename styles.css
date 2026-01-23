@@ -139,7 +139,19 @@ p {
 /* ==============================
    Images
    ============================== */
+.truck-view {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
 
+.truck-img {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  border-radius: 6px;
+}
 img {
   border-radius: 18px;
 }
